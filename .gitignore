@@ -1,0 +1,7 @@
+.idea/
+obj/
+a.out
+*.gch
+*.so
+*.a
+*.o
