@@ -8,6 +8,11 @@ A collection of tips and tools for your 42 journey.
 
   - [Correction](#a-perfect-correction)
 
+## Copy a symbolink
+```
+cp -a ../../awesome-42/inc/*.h .
+```
+
 ## Testing: no mistake allowed
 
 - libft
