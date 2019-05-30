@@ -6,7 +6,7 @@
 #    By: jterrazz <jterrazz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/23 18:00:29 by jterrazz          #+#    #+#              #
-#    Updated: 2019/05/04 23:19:21 by jterrazz         ###   ########.fr        #
+#    Updated: 2019/05/30 16:05:50 by jterrazz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,16 +14,15 @@
 # FILES             														   #
 # **************************************************************************** #
 
-# TODO Add this makefile changes to general git
+INC_PATH = inc
+LIB_PATH = libs
+BUILD_PATH = obj
+SRC_PATH = src
 
-PATH_INC = inc
-PATH_LIB = lib
-PATH_OBJ = obj
-PATH_SRC = src
+SOURCES = file.c
+LIB_SOURCES = $(LIB_PATH)/libft/libft.a $(LIB_PATH)/ft_printf/libftprintf.a
 
-SOURCES = src/*.c src/*/*.c # TODO Replace
-
-OBJECTS = $(SOURCES:%.c=$(PATH_OBJ)/%.o)
+OBJECTS = $(SOURCES:%.c=$(BUILD_PATH)/%.o)
 
 # **************************************************************************** #
 # VARIABLES         														   #
@@ -31,14 +30,10 @@ OBJECTS = $(SOURCES:%.c=$(PATH_OBJ)/%.o)
 
 NAME = ft_ssl
 
-CC = @gcc
+CC = gcc
 
-FLAGS_CC = #-Wall -Wextra -Werror
+FLAGS_CC = -Wall -Wextra -Werror
 
-PATH_LIBFT = lib/libft/libft.a
-PATH_PRINTF = lib/ft_printf/libftprintf.a
-
-# TODO fclean messages
 # **************************************************************************** #
 # COMMANDS  		    													   #
 # **************************************************************************** #
@@ -47,20 +42,22 @@ PATH_PRINTF = lib/ft_printf/libftprintf.a
 
 all: $(NAME)
 
-$(NAME): # $(OBJECTS)
+$(NAME): $(OBJECTS)
 	@make -s -C lib/ft_printf
 	@echo "Make ft_printf \033[33mok\033[0m"
 	@make -s -C lib/libft
 	@echo "Make libft \033[33mok\033[0m"
-	$(CC) $(FLAGS_CC) -I inc $(PATH_LIBFT) $(PATH_PRINTF) $(SOURCES)
+	$(CC) $(FLAGS_CC) -o $@ $^ $(LIB_SOURCES)
 	@echo "Compilation successful"
 
-# $(PATH_OBJ)/%.o: $(PATH_SRC)/%.c
+$(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
+	@mkdir -p $(@D)
+	$(CC) $(FLAGS_CC) -c -o $@ $< -I $(INC_PATH)
 
 clean:
 	@make clean -C lib/ft_printf
 	@make clean -C lib/libft
-	@rm -rf $(PATH_OBJ)
+	@rm -rf $(BUILD_PATH)
 	@echo "Clean \033[33mok\033[0m"
 
 fclean: clean
