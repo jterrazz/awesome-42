@@ -1,53 +1,89 @@
-# 42-libs
+# 42 helpers
 
-FOR MAKEFILE
-Check the pritted messages
-Check the makefile entirely and if everything is needed
-Check fclean removes all
+A collection of tips and tools for your 42 journey.
 
-Template for libraries used in other 42 projects
+- C
 
-Maybe put get_next_line inside the libft + update makefile for it
-On medium: Post to setup a full C environment
+  - Testing
 
-Correction guide
+  - [Correction](#a-perfect-correction)
 
-////
-ptr = mmap(0, buf.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0))
-		== MAP_FAILED
-		/////
+## Testing: no mistake allowed
 
-If official prototypes, check it matches exactly
+- libft
 
-Replace by these libs
-Check author file
-Check all files are allowed
-Check all files are useful
-Check norm
+  - [42 file checker](https://github.com/jgigault/42FileChecker)
 
-malloc/free + return of malloc (NULL)
-open/close + return of open (-1 ?)
-read returns and errors
+  - [libft test](https://github.com/jtoty/Libftest)
 
-Check header with name and 42
-Check allowed functions
-Check leaks
-Check returns of mallocs (Also things like strnew())
-Check no printf();
-Check for flags in compilation
-Check for no wildcards in makefile
-Check makefile rules
-Check if there are globals
-Add consts and static wverywhre
-Check all includes
-Remove the headers in all files if not used
-Read subject
-Test all errors possible
-Search for unallowed functions
-Rename files
-Check the use of size_t where needed
-Define malloc 0
-Check only C and .h file at start
-Put all headers in the lib folder
-Rename files with ft_
-ft_putstr_fd for errors (with 2 in FD)
+## A perfect correction
+
+Will someday automate most of these
+
+1. Check the author file
+
+2. Code formatting: norminette
+
+   - Check header with name and 42
+
+3. Analyse the makefile
+
+   - Required: rules: all clean fclean
+   - Required: -Werror -Wall -Wextra
+   - Required: no wildcards
+   - Check: printed messages
+   - Check: every code is usefull
+
+4. Structure
+
+5. Check all files are used
+
+6. Check only C and .h file at start
+
+7. Use good names
+
+8. Allowed functions only
+
+9. Check no printf()
+
+10. Secure the calls
+
+    - For malloc (Also things like strnew())
+
+        Define malloc 0
+    - Free: Check for leaks
+    - open/close + return of open (-1 ?)
+    - read returns and errors
+    - For mmap
+
+      ```
+      ptr = mmap(0, buf.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0)) == MAP_FAILED
+      ```
+
+11. Check the syntax
+
+12. For official prototypes, check it matches exactly
+
+13. For strings, don't forget the \n
+
+14. Check the libs are clean
+
+15. Check the use of globals
+
+16. Better code
+
+17. const variables
+
+18. static functions for internal use
+
+19. check includes and if they're needed
+
+20. Check the use of size_t where needed
+
+21. Better variable names
+
+22. ft_putstr_fd for errors (with 2 in FD)
+
+23. Test all errors possible
+
+24. Read the subject ffs
