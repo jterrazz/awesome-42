@@ -2,6 +2,8 @@
 
 A collection of tips and tools for your 42 journey.
 
+All subject corrections : https://github.com/Binary-Hackers/42_Corrections
+
 - C
 
   - Testing
@@ -86,6 +88,8 @@ Will someday automate most of these
 20. Check the use of size_t where needed
 
 21. Better variable names
+
+222. Check overflows when using int, check size_t doesn't convert to int
 
 22. ft_putstr_fd for errors (with 2 in FD)
 
