@@ -1,7 +1,9 @@
 .idea/
+.build/
 obj/
 a.out
 *.gch
 *.so
 *.a
 *.o
+.DS_Store

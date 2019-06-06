@@ -15,6 +15,10 @@ All subject corrections : https://github.com/Binary-Hackers/42_Corrections
 cp -a ../../awesome-42/inc/*.h .
 ```
 
+Use free but not for nothing
+
+https://stackoverflow.com/questions/12479476/c-how-to-free-malloced-memory-when-program-can-encounter-error-and-exit-at-diff
+
 ## Testing: no mistake allowed
 
 - libft
