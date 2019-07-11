@@ -29,9 +29,13 @@ https://stackoverflow.com/questions/12479476/c-how-to-free-malloced-memory-when-
 
 ## A perfect correction
 
+Secure the ft_memdel ft_strdel ft_lst... and others libs fts
+
 Will someday automate most of these
 
 1. Check the author file
+
+2. Cat all logins in headers
 
 2. Code formatting: norminette
 
@@ -100,3 +104,6 @@ Will someday automate most of these
 23. Test all errors possible
 
 24. Read the subject ffs
+
+TODO: Rename libs to lib
+TODO Maybe my ft_atoi is not initialized to 0 everywhere
