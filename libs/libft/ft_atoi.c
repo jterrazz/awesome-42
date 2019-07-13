@@ -6,7 +6,7 @@
 /*   By: jterrazz <jterrazz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/13 15:31:24 by jterrazz          #+#    #+#             */
-/*   Updated: 2017/04/16 15:26:23 by jterrazz         ###   ########.fr       */
+/*   Updated: 2019/07/13 14:10:44 by jterrazz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	res = 0;
+	is_neg = 0;
 	while (*(str + i) == '\t' || *(str + i) == ' ' || *(str + i) == '\f'
 			|| *(str + i) == '\n' || *(str + i) == '\r' || *(str + i) == '\v')
 		i++;

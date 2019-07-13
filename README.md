@@ -1,3 +1,5 @@
+Progress bar in makefile + replace in global libs
+
 # 42 helpers
 
 A collection of tips and tools for your 42 journey.
