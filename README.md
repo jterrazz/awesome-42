@@ -1,8 +1,24 @@
-Progress bar in makefile + replace in global libs
-
 # 42 helpers
 
-A collection of tips and tools for your 42 journey.
+> A collection of tips and tools for your 42 journey.
+
+- Check global is allowed
+- Check usage message
++ Add comment descriptions on top of exported function
++ How to use atom shift cmd p command
+rename to libc
+For flags
+```
+1<<0
+```
+
+For add modulo
+```
+size = (size + 15) & ~15;
+```
+
+- Remove not shared header and put static on all
+- Run tests before
 
 All subject corrections : https://github.com/Binary-Hackers/42_Corrections
 
@@ -36,6 +52,10 @@ Secure the ft_memdel ft_strdel ft_lst... and others libs fts
 Will someday automate most of these
 
 1. Check the author file
+
+Test all make file rules
+
+print errors  in the FD error
 
 2. Cat all logins in headers
 
@@ -106,6 +126,3 @@ Will someday automate most of these
 23. Test all errors possible
 
 24. Read the subject ffs
-
-TODO: Rename libs to lib
-TODO Maybe my ft_atoi is not initialized to 0 everywhere
