@@ -4,14 +4,16 @@ Makefile -j18
 
 // Usual errors when parsing argv
 // Test with multiple combinaisons of flags
-// Test with multiple files
+// Test with multiple files args
 // Test with flags after the file
 // directory is a file
 - Globales en static
 - Add others test from github
 - Test for leaks
 - Complete the usage
-_ doubvle free
+- doubvle free
+- Usage
+- valgrind --leak-check=full --log-fd=9 9>>tmp.log ./ft_nm
 
 > A collection of tips and tools for your 42 journey.
 
