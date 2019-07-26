@@ -1,6 +1,18 @@
 # 42 helpers
 
+Write default basic structure
 Makefile -j18
+Makefile test update like the guy
+
+ASM
+-
+Add the 0 after all asm strings
+
+Check the makefile and refactor
+If using VSCODE, need to redo the  42 headers
+
+
+Remove comments if no norm
 
 // Usual errors when parsing argv
 // Test with multiple combinaisons of flags
