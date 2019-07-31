@@ -58,7 +58,9 @@ Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
 **No crash allowed**
 
 -  `malloc` return should be secure. Don't forget to check for libft return too (ft_strnew()` for example`).
-  `malloc` should not leak. Each `malloc` must match with a `free`, see why [here](https://stackoverflow.com/questions/32966125/is-it-really-important-to-free-allocated-memory-if-the-programs-just-about-to-e). However, no need to free the entire program when you use exit() on an error. You can use `valgrind --leak-check=full <./ft_exec>` to search leaks. In case the program outputs data, you can redirect valgrind output with  `--log-fd=9 9>>val.log`.
+-  `malloc` should not leak. Each `malloc` must match with a `free`, see why [here](https://stackoverflow.com/questions/32966125/is-it-really-important-to-free-allocated-memory-if-the-programs-just-about-to-e).
+  -  However, no need to free the entire program when you use exit() on an error.
+  -  You can use `valgrind --leak-check=full <./ft_exec>` to search leaks. In case the program outputs data, you can redirect valgrind output with  `--log-fd=9 9>>val.log`.
 - Check for double `free`.
 - `open` , `read` return should be secure (returns -1 for errors). When opening or reading, you should test with folders and not allowed files (`chmod 000`).
 - `open` must be followed by `close`.
