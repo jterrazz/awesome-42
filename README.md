@@ -7,9 +7,8 @@
 - [Ressources](#ressources)
   - [Subjects](#subjects)
   - [Automated tests](#automated-tests)
-- [Good to know](#good-to-know)
-  - [How to make a perfect correction / project](#how-to-make-a-perfect-correction-/-project)
-  - [Useful code snippets](#useful-code-snippets)
+- [How to make a perfect correction / project](#how-to-make-a-perfect-correction-/-project)
+- [Useful code snippets](#useful-code-snippets)
 - [Good practices](#good-practices)
 
 ## Ressources
@@ -79,9 +78,9 @@ Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
 - When the program expects arguments, check with empty strings.
 - For executables, create a usage message.
 
-### Useful code snippets
+## Useful code snippets
 
-#### Save flags
+### Save flags
 
 ```c
 typedef enum	e_flag {
@@ -101,15 +100,15 @@ if (flags & FLAG_N) // TRUE
     ...
 ```
 
-#### Round x to a multiple of y
+### Round x to a multiple of y
 
 ```c
 int x = (x + (y-1)) & ~(y-1);
 ```
 
-### Good practices
+## Good practices
 
-#### Project file structure
+### Project file structure
 
 ```bash
 /project
@@ -120,7 +119,7 @@ int x = (x + (y-1)) & ~(y-1);
   auteur
 ```
 
-#### Code
+### Code
 
 - Use `static` on local functions and `const` for constants variables.
 - Describe exported functions using comments
