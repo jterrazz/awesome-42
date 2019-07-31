@@ -1,30 +1,32 @@
 # Awesome 42
 
-> A collection of the best ressources for your 42 journey.
+> A collection of the best ressources for your 42 school journey.
 
 ### Index
 
-- [Ressources](#ressouces)
+- [Ressources](#ressources)
   - [Subjects](#subjects)
   - [Automated tests](#automated-tests)
-- Good practices
-- Good to know
+- [Good to know](#good-to-know)
+  - [How to make a perfect correction / project](#how-to-make-a-perfect-correction-/-project)
+  - [Useful code snippets](#useful-code-snippets)
+- [Good practices](#good-practices)
 
 ## Ressources
 
 ### Subjects
 
-#### PDF
+- PDF
 
-- [Binary-Hackers](https://github.com/Binary-Hackers/42_Subjects)
+  - [Binary-Hackers](https://github.com/Binary-Hackers/42_Subjects)
 
-#### Corrections
+- Corrections
 
-- [@Hoax017](https://github.com/Hoax017/PDF-Correction-42)
+  - [@Hoax017](https://github.com/Hoax017/PDF-Correction-42)
 
-- [@Binary-Hackers](https://github.com/Binary-Hackers/42_Corrections)
+  - [@Binary-Hackers](https://github.com/Binary-Hackers/42_Corrections)
 
-- [@rizkyario](https://github.com/rizkyario/42-corrections)
+  - [@rizkyario](https://github.com/rizkyario/42-corrections)
 
 ### Automated tests
 
@@ -34,84 +36,101 @@
 
 - [@mguillau42](https://github.com/mguillau42/unit_test_nm_otool) : Nm-otool
 
-### A complete correction
+### Learning
 
-Secure the ft_memdel ft_strdel ft_lst... and others libs fts
+Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
 
-Will someday automate most of these
+## Good to know
 
-## w
+### How to make a perfect correction / project
 
-1. `cat -e auteur` prints a $ at the end
-2. Norminette
-3. Only required files
-4. Test the basic makefile rules (delete all the created files)
-5. Makefile
-6. Required: rules: all clean fclean
-7. Required: -Werror -Wall -Wextra
-8. Required: no wildcards
-9. Check the makefile doesn't recompile when no changes
-10. Cat all logins in headers
-11. Allowed functions only, use nm exec
+*On the newly cloned project*
 
-    Is it justified ?
-12. Secure the calls
-    - If malloc, also check for strnew, etc (Define malloc 0 ?)
-      - Don't forget the  ft_strnew(), etc
-    - open/close + return of open (-1 ?)
-    - read returns and errors
-    - For mmap
+- `cat -e auteur` must show the login followed by a `\n` (print as `$` with `cat -e`).
 
-      ```
-      ptr = mmap(0, buf.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0)) == MAP_FAILED
-      ```
-      11. Check for leaks
-13. For official prototypes, check it matches exactly
-14. For strings, don't forget the \n
-15. Check the libs are clean
-16. Check the use of globals
-17. Check overflows when using int, check size_t doesn't convert to int
+- `norminette | grep 'Error'` should print nothing. 
 
-- Check global is allowed
-- Check usage message
-- Add comment descriptions on top of exported function
-- How to use atom shift cmd p command
+- `cat */*.c | grep "By: "` should print the student login (it can print <marvin@42.fr> for the mail).
 
-  rename to libc
+The makefile
 
-  For flags
+- should have the basic rules: `all` , `$(NAME)`, `clean`, `fclean` and `re`.
+
+- should clean the entire project with `fclean` .
+
+- should compile with `-Werror -Wextra -Wall`.
+
+- should not have any `*`.
+
+- should compile only modified files using `.io` temporary object files.
+
+No cheating allowed
+
+- `nm -u <exec | lib.a>` should print the allowed functions for the subject. Take into account only the functions  starting with one _.
+
+- In case other functions are used for bonuses, it must be justified (for example, `printf` for laziness is not allowed).
+
+No crash allowed
+
+-  `malloc` return should be secure. Don't forget to check for libft return too (`ft_strnew()` for example).
+- `malloc` should not leak. Each `malloc` must match with a `free`. Use `valgrind --leak-check=full <./ft_exec>` to search leaks.
+
+- `open` , `read` return should be secure (returns -1 for errors).
+
+- `open` must be followed by `close`.
+- `mmap` return must be secure.
+
+  ```
+  ptr = mmap(0, buf.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0)) == MAP_FAILEDCheck for leaks
+  ```
+
+Other
+
+- When implementing existing methods, check their prototype matches exactly.
+
+- When implementing existing commands, check it diplays the exact same return. Use `diff <(./ft_x) <(x)`
+
+- Check if globals are allowed. Use `nm <./ft_x>` to show them.
+
+- Check your overflows with int/size_t.
+
+- Create a usage message.
+
+### Useful code snippets
+
+- - For flags
+
+  
 
   ```
   1<<0
   ```
 
-For add modulo
+  ## 
 
-```
-size = (size + 15) & ~15;
-```
+  For add modulo
 
-- Remove not shared header and put static on all
-- Run tests before
+  ```
+  size = (size + 15) & ~15;
+  ```
 
-  ## Good practices
+
+  Remove not shared header and put static on all
+
+  Add comment descriptions on top of exported function
 - Use good names
 
   print errors  in the FD error
 
-16. Better code
+16. const variables for example with main
 
-17. const variables
+17. static functions for internal use
 
-18. static functions for internal use
-
-19. check includes and if they're needed
-
-20. Check the use of size_t where needed
-
-21. Better variable names
+18. Stop thinking the  norm is bad, and use smart variable names
 
 
+
+Secure the ft_memdel ft_strdel ft_lst... and others libs fts
 
 ## Good to know
 
