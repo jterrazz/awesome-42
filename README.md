@@ -5,13 +5,9 @@
 ### Index
 
 - [Ressources](#ressouces)
-
   - Subjects
-
   - Automated tests
-
 - Good practices
-
 - Good to know
 
 ## External ressources
