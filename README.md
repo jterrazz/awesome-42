@@ -32,16 +32,15 @@
 
 Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
 
-## Good to know
 
-### How to make a perfect correction / project
+## How to make a perfect correction / project
 
 *On the newly cloned project*
 - `cat -e auteur` must show the login followed by a `\n` (print as `$` with `cat -e`).
 - `norminette | grep 'Error'` should print nothing. 
 - `cat */*.c | grep "By: "` should print the student login (it can print <marvin@42.fr> for the mail).
 
-**The makefile**
+### The makefile
 
 - should have the basic rules: `all` , `$(NAME)`, `clean`, `fclean` and `re`.
 - should clean the entire project with `fclean` .
@@ -49,12 +48,12 @@ Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
 - should not have any `*`.
 - should compile only modified files using `.io` temporary object files.
 
-**No cheating allowed**
+### No cheating allowed
 
 - `nm -u <exec | lib.a>` should print the allowed functions for the subject. Take into account only the functions  starting with one _.
 - In case other functions are used for bonuses, it must be justified (for example, `printf` for laziness is not allowed).
 
-**No crash allowed**
+### No crash allowed
 
 -  `malloc` return should be secure. Don't forget to check for libft return too (ft_strnew()` for example`).
 -  `malloc` should not leak. Each `malloc` must match with a `free`, see why [here](https://stackoverflow.com/questions/32966125/is-it-really-important-to-free-allocated-memory-if-the-programs-just-about-to-e).
@@ -69,7 +68,7 @@ Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
   ptr = mmap(0, buf.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0)) == MAP_FAILEDCheck for leaks
   ```
 
-**Other**
+### Other
 
 - When implementing existing methods, check their prototype matches exactly.
 - When implementing existing commands, check it diplays the exact same return. Use `diff <(./ft_x) <(x)`
