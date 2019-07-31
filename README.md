@@ -1,6 +1,6 @@
 # Awesome 42
 
-> A collection of the best ressources and advices for your 42 journey.
+> A collection of the best ressources for your 42 journey.
 
 ### Index
 
