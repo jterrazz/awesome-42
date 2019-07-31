@@ -50,7 +50,7 @@ Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
 - should clean the entire project with `fclean` .
 - should compile with `-Werror -Wextra -Wall`.
 - should not have any `*`.
-- should compile only modified files using `.io` temporary object files.
+- should compile only modified files using `.o` temporary object files.
 
 ### No cheating allowed
 
