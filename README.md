@@ -28,6 +28,10 @@
 - [@jtoty](https://github.com/jtoty/Libftest): Libft
 - [@mguillau42](https://github.com/mguillau42/unit_test_nm_otool) : Nm-otool
 
+### Automated code formating
+
+I created an uncrustify config file for the [42 norm](./_norm/uncrustify.cfg). Uncrustify allows you to format automatically your `.c` and `,h` files. It's not complete yet, feel free to contribute to it 🙏.
+
 ### Learning
 
 Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
@@ -46,7 +50,7 @@ Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
 - should clean the entire project with `fclean` .
 - should compile with `-Werror -Wextra -Wall`.
 - should not have any `*`.
-- should compile only modified files using `.io` temporary object files.
+- should compile only modified files using `.o` temporary object files.
 
 ### No cheating allowed
 
@@ -122,7 +126,6 @@ int x = (x + (y-1)) & ~(y-1);
 
 - Use `static` on local functions and `const` for constants variables.
 - Describe exported functions using comments
-- Add comment descriptions on top of exported function
 - Print errors  in the FD error
 - Don't use `if (ptr) free(ptr)`, it does it for you.
 - Stop thinking the norm is bad, 25 lines per function will make you code better and generic functions
