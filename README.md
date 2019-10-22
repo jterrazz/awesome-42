@@ -17,10 +17,6 @@
 
 - PDF
   - [Binary-Hackers](https://github.com/Binary-Hackers/42_Subjects)
-- Corrections
-  - [@Hoax017](https://github.com/Hoax017/PDF-Correction-42)
-  - [@Binary-Hackers](https://github.com/Binary-Hackers/42_Corrections)
-  - [@rizkyario](https://github.com/rizkyario/42-corrections)
 
 ### Automated tests
 
@@ -32,12 +28,12 @@
 
 I created an uncrustify config file for the [42 norm](./_norm/uncrustify.cfg). Uncrustify allows you to format automatically your `.c` and `,h` files. It's not complete yet, feel free to contribute to it 🙏.
 
-### Learning
+### Tricks
 
-Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
+- [Simulate linux efficiently on MacOS](https://github.com/jterrazz/docker-devstation)
 
 
-## How to make a perfect correction / project
+## A complete correction basics
 
 *On the newly cloned project*
 - `cat -e auteur` must show the login followed by a `\n` (print as `$` with `cat -e`).
@@ -52,12 +48,12 @@ Go check out my [medium stories here 🥰](https://medium.com/a-42-journey)
 - should not have any `*`.
 - should compile only modified files using `.o` temporary object files.
 
-### No cheating allowed
+### No cheating
 
 - `nm -u <exec | lib.a>` should print the allowed functions for the subject. Take into account only the functions  starting with one _.
 - In case other functions are used for bonuses, it must be justified (for example, `printf` for laziness is not allowed).
 
-### No crash allowed
+### No crash
 
 -  `malloc` return should be secure. Don't forget to check for libft return too (ft_strnew()` for example`).
 -  `malloc` should not leak. Each `malloc` must match with a `free`, see why [here](https://stackoverflow.com/questions/32966125/is-it-really-important-to-free-allocated-memory-if-the-programs-just-about-to-e).
